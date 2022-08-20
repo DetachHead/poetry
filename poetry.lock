@@ -327,6 +327,14 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "installer"
+version = "0.5.1"
+description = "A library for installing Python wheels."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "jeepney"
 version = "0.8.0"
 description = "Low-level, pure Python DBus protocol wrapper."
@@ -972,7 +980,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "2ff2a3b8ed43465e36528d1ac314e24aaecb0b0316b7b777b8011fe691e09e35"
+content-hash = "b9bbdf11865d9d75102e8de1c35e898b20a6316bbf62fe7f2e93870afc264f90"
 
 [metadata.files]
 atomicwrites = [
@@ -1228,6 +1236,10 @@ importlib-resources = [
 iniconfig = [
     {file = "iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3"},
     {file = "iniconfig-1.1.1.tar.gz", hash = "sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"},
+]
+installer = [
+    {file = "installer-0.5.1-py3-none-any.whl", hash = "sha256:1d6c8d916ed82771945b9c813699e6f57424ded970c9d8bf16bbc23e1e826ed3"},
+    {file = "installer-0.5.1.tar.gz", hash = "sha256:f970995ec2bb815e2fdaf7977b26b2091e1e386f0f42eafd5ac811953dc5d445"},
 ]
 jeepney = [
     {file = "jeepney-0.8.0-py3-none-any.whl", hash = "sha256:c0a454ad016ca575060802ee4d590dd912e35c122fa04e70306de3d076cce755"},
