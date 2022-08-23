@@ -533,7 +533,7 @@ class Executor:
         if not Path(package.source_url).is_absolute() and package.root_dir:
             archive = package.root_dir / archive
 
-        return self._chef.prepare(archive)
+        return self._chef.prepare(archive, editable=package.develop)
 
     def _install_directory(self, operation: Install | Update) -> int:
         package = operation.package
@@ -553,12 +553,6 @@ class Executor:
 
         if package.source_subdirectory:
             req /= package.source_subdirectory
-
-        if package.develop:
-            # Editable installations are currently not supported
-            # for PEP-517 build systems so we defer to pip.
-            # TODO: Remove this workaround once either PEP-660 or PEP-662 is accepted
-            return self.pip_install(req, editable=True)
 
         archive = self._prepare_archive(operation)
 
